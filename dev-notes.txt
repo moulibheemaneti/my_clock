@@ -1,0 +1,12 @@
+Commands:
+- Launcher Icons Generate: flutter pub run flutter_launcher_icons:main
+- Build Runner - flutter pub run build_runner build --delete-conflicting-outputs
+
+Builds:
+- iOS: flutter build ipa
+- Android: flutter build appbundle
+
+Cleans:
+- flutter clean && flutter pub get
+- rm ios/Podfile.lock
+- cd ios/ && pod cache clean --all && pod repo update && pod install

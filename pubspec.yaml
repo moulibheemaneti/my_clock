@@ -1,0 +1,54 @@
+name: my_clock
+
+description: A new clock made in Flutter.
+
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.6 <3.0.0"
+
+dependencies:
+  # Cupertino icons are used for customized cupertino icons.
+  cupertino_icons: ^1.0.2
+
+  # Flutter sdk to build the app.
+  flutter:
+    sdk: flutter
+
+  # Launch Icons for the flutter app.
+  flutter_launcher_icons: ^0.9.3
+
+  # State management
+  get: ^4.6.5
+
+  # Package Info
+  # package_info_plus: ^1.3.1
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+# The following section is specific to Flutter packages.
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+  #   - images/a_dot_ham.jpeg
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/app_logo.png"
