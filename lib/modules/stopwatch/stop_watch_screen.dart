@@ -1,8 +1,6 @@
-// Flutter in-built packages
+// Flutter packages
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-// External packages
 import 'package:get/get.dart';
 
 // Local imports

@@ -1,9 +1,11 @@
 // Dart packages
 import 'dart:async';
 
-// External packages
+// Flutter packages
 import 'package:get/get.dart';
-import 'package:my_clock/models/split_timer.dart';
+
+// Local imports
+import '../../models/split_timer.dart';
 
 /// StopWatchController
 class TimerController extends GetxController {
@@ -30,7 +32,8 @@ class TimerController extends GetxController {
   int get stopDifference => _stopDifference.value;
   set stopDifference(int value) => _stopDifference.value = value;
 
-  var listOfStops = <SplitTimer>[].obs;
+  /// `listOfSplits` is the list of splits of the timer.
+  var listOfSplits = <SplitTimer>[].obs;
 
   void updateStopWatch() {
     isCounting = !isCounting;
@@ -44,19 +47,21 @@ class TimerController extends GetxController {
     });
   }
 
+  /// `resetStopWatch` is the method which is used to reset the stopwatch.
   void resetStopWatch() {
     milliSecondsElapsed = 0;
     stopDifference = 0;
     isCounting = false;
-    listOfStops.clear();
+    listOfSplits.clear();
   }
 
+  /// `splitTimer` is the method which is used to split the timer.
   void splitTimer() {
     var splitTimerObject = SplitTimer(
       milliSecondsElapsed: milliSecondsElapsed,
       stopDifference: stopDifference,
     );
-    listOfStops.add(splitTimerObject);
+    listOfSplits.add(splitTimerObject);
     stopDifference = 0;
   }
 }

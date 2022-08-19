@@ -1,7 +1,5 @@
-// Flutter in-built packages
+// Flutter packages
 import 'package:flutter/material.dart';
-
-// External packages
 import 'package:get/get.dart';
 
 // Local imports
@@ -13,6 +11,7 @@ import 'timer_controller.dart';
 class TimerScreen extends StatelessWidget {
   TimerScreen({Key? key}) : super(key: key);
 
+  /// Initializes TimerScreen Controller.
   final controller = Get.put(TimerController());
 
   @override
@@ -24,7 +23,7 @@ class TimerScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Obx(() {
-              if (controller.listOfStops.isEmpty) {
+              if (controller.listOfSplits.isEmpty) {
                 return SizedBox(height: Get.size.height / 12);
               }
               return Container();
@@ -42,11 +41,11 @@ class TimerScreen extends StatelessWidget {
               );
             }),
             Obx(() {
-              var items = controller.listOfStops;
+              var items = controller.listOfSplits;
               return ListView.builder(
                 shrinkWrap: true,
                 controller: ScrollController(),
-                itemCount: controller.listOfStops.length,
+                itemCount: controller.listOfSplits.length,
                 itemBuilder: ((context, index) {
                   return ListTile(
                     key: ValueKey(index + 1),

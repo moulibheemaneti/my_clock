@@ -1,10 +1,8 @@
 // Dart packages
 import 'dart:async';
 
-// Flutter in-built packages
+// Flutter packages
 import 'package:flutter/material.dart';
-
-// External packages
 import 'package:get/get.dart';
 
 /// StopWatchController
@@ -40,7 +38,9 @@ class StopWatchController extends GetxController {
       secondsElapsed = defaultTime.inSeconds;
     }
     showTimePicker = false;
+
     isCounting = !isCounting;
+    
     Timer.periodic(const Duration(seconds: 1), (timer) {
       if (isCounting && secondsElapsed != 0) {
         secondsElapsed = secondsElapsed - 1;

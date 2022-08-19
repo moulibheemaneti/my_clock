@@ -1,5 +1,7 @@
+// Flutter packages
 import 'package:flutter/material.dart';
 
+/// `SettingsScreen` is the screen which is used to display the settings of the app.
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({Key? key}) : super(key: key);
 

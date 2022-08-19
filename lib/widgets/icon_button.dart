@@ -1,7 +1,8 @@
-// Flutter in-built packages
+// Flutter packages
 import 'package:flutter/material.dart';
 
-/// `CustomIconButton`
+/// `CustomIconButton` is a custom icon button which is used in the app.
+/// It is used for play, pause,split timer and reset buttons.
 class CustomIconButton extends StatelessWidget {
   const CustomIconButton({
     Key? key,
@@ -13,7 +14,10 @@ class CustomIconButton extends StatelessWidget {
   /// icon to be displayed
   final IconData icon;
 
+  /// Color of the icon
   final Color? color;
+
+  /// Function to be called on tap
   final void Function()? onTap;
 
   @override

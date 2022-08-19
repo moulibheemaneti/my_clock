@@ -1,4 +1,4 @@
-// Flutter in-built packages
+// Flutter packages
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

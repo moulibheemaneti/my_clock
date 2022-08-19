@@ -1,7 +1,7 @@
 // Dart package
 import 'dart:async';
 
-// External packages
+// Flutter packages
 import 'package:get/get.dart';
 
 /// ClockController is the controller of the clock tab or clock screen.

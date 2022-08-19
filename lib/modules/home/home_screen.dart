@@ -1,7 +1,5 @@
-// Flutter in-built packages
+// Flutter packages
 import 'package:flutter/material.dart';
-
-// External packages
 import 'package:get/get.dart';
 
 // Local imports
@@ -17,6 +15,8 @@ class HomeScreen extends StatelessWidget {
 
   /// Initializes HomeScreen Controller.
   final homeController = Get.put(HomeController());
+
+  /// Initializes Theme Controller.
   final themeController = Get.find<ThemeController>();
 
   @override
@@ -43,8 +43,13 @@ class HomeScreen extends StatelessWidget {
               child: TabBarView(
                 controller: homeController.tabController,
                 children: <Widget>[
+                  // Displays Clock Screen
                   ClockScreen(),
+
+                  // Displays Timer Screen
                   TimerScreen(),
+
+                  // Displays Stopwatch Screen
                   StopWatchScreen(),
                 ],
               ),

@@ -1,7 +1,5 @@
-// Flutter in-built packages
+// Flutter Packages
 import 'package:flutter/material.dart';
-
-// External packages
 import 'package:get/get.dart';
 
 // Local imports
@@ -18,7 +16,7 @@ void main() {
   runApp(MyApp());
 }
 
-/// MyApp
+/// MyApp is the base class of the whole flutter app.
 class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
 

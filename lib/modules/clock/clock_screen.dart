@@ -1,7 +1,5 @@
-// Flutter in-built packages
+// Flutter packages
 import 'package:flutter/material.dart';
-
-// External packages
 import 'package:get/get.dart';
 
 // Local imports
@@ -28,10 +26,15 @@ class ClockScreen extends StatelessWidget {
           return Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              // Hour text
               ClockText(text: time.hour.twoDigitString()),
               ClockText.semiColonText(),
+
+              // Minute text
               ClockText(text: time.minute.twoDigitString()),
               ClockText.semiColonText(),
+
+              // Seconds text
               ClockText(text: time.second.twoDigitString()),
             ],
           );

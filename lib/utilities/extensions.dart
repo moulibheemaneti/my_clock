@@ -1,3 +1,4 @@
+/// `IntegerExtensions` provides a set of extensions for `int` type.
 extension IntegerExtensions on int {
   /// Returns the [int] value as a [String] with the specified [radix].
   String toRadixString(int radix) {
